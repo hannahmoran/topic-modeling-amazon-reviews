@@ -254,7 +254,7 @@ def get_frequency_dicts(df, final_results, product, input_text, load_path):
     tn = final_results.loc[product, 'top_n removed'].astype(int)
     na = final_results.loc[product, 'n_above threshold']
 
-    lda = gensim.models.ldamodel.LdaModel.load('.../models/{}/final_models/{}_{}_{}_{}_{}'.format(load_path, 
+    lda = gensim.models.ldamodel.LdaModel.load('../models/{}/final_models/{}_{}_{}_{}_{}'.format(load_path, 
                                                                                          product, 
                                                                                          t, p,
                                                                                       tn, na))
@@ -354,7 +354,7 @@ def get_frequency_dicts(df, final_results, product, input_text, load_path):
     tn = final_results.loc[product, 'top_n removed'].astype(int)
     na = final_results.loc[product, 'n_above threshold']
 
-    lda = gensim.models.ldamodel.LdaModel.load('.../models/{}/final_models/{}_{}_{}_{}_{}'.format(load_path, 
+    lda = gensim.models.ldamodel.LdaModel.load('../models/{}/final_models/{}_{}_{}_{}_{}'.format(load_path, 
                                                                                          product, 
                                                                                          t, p,
                                                                                       tn, na))

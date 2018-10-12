@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import gensim
 import ast
+import operator
 
 from bokeh.plotting import figure, show, output_notebook
 from bokeh.models import ColumnDataSource, LabelSet, Jitter, HoverTool
@@ -23,7 +24,8 @@ def get_review_topics(doc, lda):
     """
     bow = lda.id2word.doc2bow(doc)
     topics = lda.get_document_topics(bow, minimum_probability=0)
-    return dict(topics)
+    topic_mix = dict(topics)
+    return topic_mix
 
 
 def get_sub_topic_fit(mixture):
@@ -63,7 +65,7 @@ def assign_topics(df, product, final_results, load_path, input_text, encoding_ty
     p = final_results.loc[product, 'passes']
     tn = final_results.loc[product, 'top_n removed'].astype(int)
     na = final_results.loc[product, 'n_above threshold']
-    lda = gensim.models.ldamodel.LdaModel.load('.../models/{}/final_models/{}_{}_{}_{}_{}'.format(load_path, 
+    lda = gensim.models.ldamodel.LdaModel.load('../models/{}/final_models/{}_{}_{}_{}_{}'.format(load_path, 
                                                                                          product, 
                                                                                          t, p,
                                                                                          tn, na)) 
@@ -76,21 +78,23 @@ def assign_topics(df, product, final_results, load_path, input_text, encoding_ty
     
     # Create a new column with text formatted properly
     df.loc[:,'doc'] = df[input_text].str.split(' ')
-    
+
     # Use masking to select only the reviews for the product we are considering
     mask_pdct = (df['ProductId'] == product)
-    valid_1 = df[mask_pdct]
+
 
     # Insert a dictionary with the topic mixture likelihoods into the dataframe
     df.loc[mask_pdct, 
-           topic_mixtures] = valid_1['doc'].apply(lambda x: get_review_topics(x, lda))
-    
-    # indicate which topic has the highest likelihood as the topic assignment
-    df.loc[mask_pdct, 
-           max_topic] = valid_1[topic_mixtures].apply(lambda x: max(ast.literal_eval(x).keys(), key=(lambda key: ast.literal_eval(x)[key])))
+           topic_mixtures] = df.loc[mask_pdct, 'doc'].apply(lambda x: get_review_topics(x, lda))
 
-    df.loc[mask_pdct, 
-           max_topic_fit] = valid_1[topic_mixtures].apply(lambda x: max(ast.literal_eval(x).values()))
+    valid_1 = df[mask_pdct]
+    # indicate which topic has the highest likelihood as the topic assignment
+    #df.loc[mask_pdct, max_topic] = valid_1[topic_mixtures].apply(lambda x: max(ast.literal_eval(x).keys(), key=(lambda key: ast.literal_eval(x)[key])))
+    df.loc[mask_pdct, max_topic] = valid_1[topic_mixtures].apply(lambda x: max(x.keys(), key=(lambda key: x[key])))
+
+
+    #df.loc[mask_pdct, max_topic_fit] = valid_1[topic_mixtures].apply(lambda x: max(ast.literal_eval(x).values()))
+    df.loc[mask_pdct, max_topic_fit] = valid_1[topic_mixtures].apply(lambda x: max(x.values()))
 
     mask_fit = ((df['ProductId']==product) & (df[max_topic_fit]<0.7))
     valid_2 = df[mask_fit]
@@ -100,7 +104,7 @@ def assign_topics(df, product, final_results, load_path, input_text, encoding_ty
     df.loc[mask_fit, sub_topic_fit] = valid_2[topic_mixtures].apply(lambda x: get_sub_topic_fit(x))
 
     # Make sure the topic values are integers for max topic; cannot for subtopic b/c NaNs
-    df[max_topic] = df[max_topic].astype(int)
+    df.loc[mask_fit, max_topic] = df.loc[mask_fit, max_topic].astype(int)
     
     # We don't need this text format any longer and can drop the column
     df = df.drop('doc', axis=1, inplace=True) 

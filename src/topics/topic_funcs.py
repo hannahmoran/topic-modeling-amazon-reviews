@@ -19,9 +19,9 @@ from gensim.models.coherencemodel import CoherenceModel
 from nltk.collocations import BigramAssocMeasures, TrigramAssocMeasures, QuadgramCollocationFinder, BigramCollocationFinder, TrigramCollocationFinder
 from nltk import word_tokenize, FreqDist, bigrams, trigrams
 
-with open('trigrams_filter.txt', 'rb') as f:
+with open('../src/topics/trigrams_filter.txt', 'rb') as f:
     trigrams_filter = pickle.load(f)
-with open('bigrams_filter.txt', 'rb') as f:
+with open('../src/topics/bigrams_filter.txt', 'rb') as f:
     bigrams_filter = pickle.load(f)
 
 
@@ -70,7 +70,7 @@ def print_topics(product, df, final_results, input_text, load_path):
     tn = final_results.loc[product, 'top_n removed'].astype(int)
     na = final_results.loc[product, 'n_above threshold']
 
-    lda = gensim.models.ldamodel.LdaModel.load("../models/{}/final_models/{}_{}_{}_{}_{}".format(load_path, 
+    lda = gensim.models.ldamodel.LdaModel.load(".../models/{}/final_models/{}_{}_{}_{}_{}".format(load_path, 
                                                                                          product, 
                                                                                          t, p,
                                                                                          tn, na))

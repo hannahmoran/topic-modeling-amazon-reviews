@@ -1,0 +1,129 @@
+2018-10-11 21:28:29,655 : INFO - using symmetric alpha at 0.16666666666666666
+2018-10-11 21:28:29,658 : INFO - using symmetric eta at 0.16666666666666666
+2018-10-11 21:28:29,663 : INFO - using serial LDA version on this node
+2018-10-11 21:28:29,672 : INFO - running online (multi-pass) LDA training, 6 topics, 5 passes over the supplied corpus of 630 documents, updating model once every 210 documents, evaluating perplexity every 630 documents, iterating 50x with a convergence threshold of 0.001000
+2018-10-11 21:28:29,684 : INFO - PROGRESS: pass 0, at document #210/630
+2018-10-11 21:28:30,189 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:30,200 : INFO - topic #4 (0.167): 0.070*"GOODREVIEW" + 0.044*"BADREVIEW" + 0.015*"teeth" + 0.013*"treat" + 0.012*"would" + 0.012*"get" + 0.009*"one" + 0.008*"box" + 0.008*"come" + 0.007*"buy"
+2018-10-11 21:28:30,204 : INFO - topic #2 (0.167): 0.104*"GOODREVIEW" + 0.020*"BADREVIEW" + 0.017*"teeth" + 0.016*"get" + 0.014*"amazon" + 0.012*"time" + 0.012*"one" + 0.012*"greenie" + 0.011*"price" + 0.011*"give"
+2018-10-11 21:28:30,208 : INFO - topic #3 (0.167): 0.083*"GOODREVIEW" + 0.014*"amazon" + 0.013*"treat" + 0.012*"chew" + 0.012*"one" + 0.012*"BADREVIEW" + 0.010*"buy" + 0.009*"like" + 0.009*"small" + 0.009*"get"
+2018-10-11 21:28:30,214 : INFO - topic #5 (0.167): 0.053*"GOODREVIEW" + 0.022*"BADREVIEW" + 0.021*"get" + 0.015*"like" + 0.013*"buy" + 0.009*"eat" + 0.009*"one" + 0.009*"give" + 0.009*"good" + 0.009*"treat"
+2018-10-11 21:28:30,218 : INFO - topic #1 (0.167): 0.115*"GOODREVIEW" + 0.049*"BADREVIEW" + 0.022*"teeth" + 0.019*"treat" + 0.013*"one" + 0.011*"give" + 0.010*"get" + 0.010*"great" + 0.009*"good" + 0.009*"like"
+2018-10-11 21:28:30,224 : INFO - topic diff=4.259629, rho=1.000000
+2018-10-11 21:28:30,236 : INFO - PROGRESS: pass 0, at document #420/630
+2018-10-11 21:28:30,569 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:30,576 : INFO - topic #0 (0.167): 0.098*"GOODREVIEW" + 0.040*"BADREVIEW" + 0.018*"breath" + 0.014*"treat" + 0.012*"get" + 0.012*"chew" + 0.011*"buy" + 0.010*"day" + 0.010*"make" + 0.009*"like"
+2018-10-11 21:28:30,579 : INFO - topic #1 (0.167): 0.125*"GOODREVIEW" + 0.048*"BADREVIEW" + 0.024*"teeth" + 0.023*"treat" + 0.015*"get" + 0.015*"one" + 0.012*"give" + 0.011*"breath" + 0.010*"great" + 0.010*"good"
+2018-10-11 21:28:30,582 : INFO - topic #5 (0.167): 0.044*"GOODREVIEW" + 0.021*"get" + 0.017*"BADREVIEW" + 0.012*"buy" + 0.010*"like" + 0.010*"day" + 0.009*"treat" + 0.009*"greenie" + 0.008*"one" + 0.008*"go"
+2018-10-11 21:28:30,586 : INFO - topic #3 (0.167): 0.076*"GOODREVIEW" + 0.016*"amazon" + 0.014*"treat" + 0.012*"price" + 0.011*"chew" + 0.010*"BADREVIEW" + 0.009*"buy" + 0.009*"one" + 0.008*"get" + 0.007*"good"
+2018-10-11 21:28:30,588 : INFO - topic #4 (0.167): 0.052*"GOODREVIEW" + 0.047*"BADREVIEW" + 0.015*"treat" + 0.015*"get" + 0.012*"would" + 0.012*"teeth" + 0.010*"make" + 0.009*"one" + 0.009*"sure" + 0.009*"go"
+2018-10-11 21:28:30,592 : INFO - topic diff=1.153625, rho=0.707107
+2018-10-11 21:28:31,010 : INFO - -7.380 per-word bound, 166.5 perplexity estimate based on a held-out corpus of 210 documents with 6623 words
+2018-10-11 21:28:31,012 : INFO - PROGRESS: pass 0, at document #630/630
+2018-10-11 21:28:31,328 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:31,335 : INFO - topic #0 (0.167): 0.082*"GOODREVIEW" + 0.048*"BADREVIEW" + 0.013*"treat" + 0.013*"breath" + 0.012*"chew" + 0.010*"buy" + 0.010*"make" + 0.009*"like" + 0.009*"get" + 0.008*"day"
+2018-10-11 21:28:31,339 : INFO - topic #1 (0.167): 0.126*"GOODREVIEW" + 0.050*"BADREVIEW" + 0.024*"teeth" + 0.021*"treat" + 0.016*"one" + 0.015*"get" + 0.012*"give" + 0.012*"great" + 0.010*"clean" + 0.010*"good"
+2018-10-11 21:28:31,341 : INFO - topic #5 (0.167): 0.034*"GOODREVIEW" + 0.015*"BADREVIEW" + 0.014*"get" + 0.009*"buy" + 0.008*"greenie" + 0.007*"treat" + 0.007*"leave" + 0.007*"day" + 0.006*"like" + 0.006*"box"
+2018-10-11 21:28:31,345 : INFO - topic #2 (0.167): 0.096*"GOODREVIEW" + 0.018*"get" + 0.016*"price" + 0.016*"BADREVIEW" + 0.015*"time" + 0.015*"greenie" + 0.014*"amazon" + 0.012*"one" + 0.012*"order" + 0.011*"teeth"
+2018-10-11 21:28:31,349 : INFO - topic #4 (0.167): 0.069*"BADREVIEW" + 0.040*"GOODREVIEW" + 0.011*"would" + 0.011*"treat" + 0.010*"get" + 0.009*"eat" + 0.009*"make" + 0.008*"box" + 0.007*"cause" + 0.007*"sure"
+2018-10-11 21:28:31,352 : INFO - topic diff=1.132462, rho=0.577350
+2018-10-11 21:28:31,365 : INFO - PROGRESS: pass 1, at document #210/630
+2018-10-11 21:28:31,597 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:31,604 : INFO - topic #4 (0.167): 0.064*"BADREVIEW" + 0.038*"GOODREVIEW" + 0.012*"would" + 0.012*"treat" + 0.011*"get" + 0.009*"make" + 0.009*"box" + 0.009*"eat" + 0.008*"bag" + 0.007*"sure"
+2018-10-11 21:28:31,607 : INFO - topic #2 (0.167): 0.101*"GOODREVIEW" + 0.016*"get" + 0.016*"price" + 0.015*"time" + 0.015*"amazon" + 0.015*"BADREVIEW" + 0.014*"greenie" + 0.012*"one" + 0.011*"teeth" + 0.010*"box"
+2018-10-11 21:28:31,611 : INFO - topic #0 (0.167): 0.085*"GOODREVIEW" + 0.045*"BADREVIEW" + 0.014*"breath" + 0.012*"chew" + 0.012*"treat" + 0.011*"make" + 0.010*"like" + 0.009*"buy" + 0.008*"get" + 0.008*"day"
+2018-10-11 21:28:31,613 : INFO - topic #5 (0.167): 0.031*"GOODREVIEW" + 0.014*"BADREVIEW" + 0.014*"get" + 0.008*"like" + 0.008*"buy" + 0.007*"greenie" + 0.006*"leave" + 0.006*"treat" + 0.006*"morning" + 0.005*"go"
+2018-10-11 21:28:31,618 : INFO - topic #3 (0.167): 0.059*"GOODREVIEW" + 0.014*"amazon" + 0.012*"price" + 0.011*"pet" + 0.010*"buy" + 0.009*"treat" + 0.008*"chew" + 0.008*"find" + 0.008*"BADREVIEW" + 0.008*"one"
+2018-10-11 21:28:31,622 : INFO - topic diff=0.506199, rho=0.447214
+2018-10-11 21:28:31,632 : INFO - PROGRESS: pass 1, at document #420/630
+2018-10-11 21:28:31,862 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:31,870 : INFO - topic #0 (0.167): 0.085*"GOODREVIEW" + 0.043*"BADREVIEW" + 0.015*"breath" + 0.013*"chew" + 0.012*"treat" + 0.010*"make" + 0.010*"like" + 0.009*"buy" + 0.009*"get" + 0.009*"well"
+2018-10-11 21:28:31,872 : INFO - topic #2 (0.167): 0.100*"GOODREVIEW" + 0.018*"get" + 0.017*"price" + 0.016*"amazon" + 0.014*"greenie" + 0.013*"time" + 0.013*"BADREVIEW" + 0.012*"teeth" + 0.012*"one" + 0.011*"buy"
+2018-10-11 21:28:31,877 : INFO - topic #5 (0.167): 0.027*"GOODREVIEW" + 0.012*"get" + 0.012*"BADREVIEW" + 0.010*"greenie" + 0.008*"leave" + 0.007*"run" + 0.007*"shipping" + 0.007*"like" + 0.007*"buy" + 0.006*"door"
+2018-10-11 21:28:31,880 : INFO - topic #1 (0.167): 0.128*"GOODREVIEW" + 0.047*"BADREVIEW" + 0.025*"teeth" + 0.023*"treat" + 0.017*"get" + 0.016*"one" + 0.012*"give" + 0.012*"breath" + 0.011*"great" + 0.010*"good"
+2018-10-11 21:28:31,884 : INFO - topic #4 (0.167): 0.060*"BADREVIEW" + 0.033*"GOODREVIEW" + 0.013*"treat" + 0.012*"get" + 0.012*"would" + 0.012*"make" + 0.010*"eat" + 0.010*"sure" + 0.008*"box" + 0.007*"thing"
+2018-10-11 21:28:31,888 : INFO - topic diff=0.449776, rho=0.447214
+2018-10-11 21:28:32,171 : INFO - -6.781 per-word bound, 109.9 perplexity estimate based on a held-out corpus of 210 documents with 6623 words
+2018-10-11 21:28:32,174 : INFO - PROGRESS: pass 1, at document #630/630
+2018-10-11 21:28:32,393 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:32,400 : INFO - topic #3 (0.167): 0.046*"GOODREVIEW" + 0.013*"price" + 0.012*"amazon" + 0.012*"pet" + 0.010*"vendor" + 0.010*"purchase" + 0.008*"buy" + 0.008*"BADREVIEW" + 0.007*"sell" + 0.007*"pack"
+2018-10-11 21:28:32,402 : INFO - topic #4 (0.167): 0.079*"BADREVIEW" + 0.028*"GOODREVIEW" + 0.011*"eat" + 0.011*"make" + 0.010*"would" + 0.010*"treat" + 0.009*"get" + 0.008*"box" + 0.008*"cause" + 0.007*"sure"
+2018-10-11 21:28:32,406 : INFO - topic #2 (0.167): 0.098*"GOODREVIEW" + 0.018*"price" + 0.017*"get" + 0.016*"time" + 0.016*"amazon" + 0.015*"greenie" + 0.014*"order" + 0.013*"BADREVIEW" + 0.013*"one" + 0.012*"buy"
+2018-10-11 21:28:32,411 : INFO - topic #5 (0.167): 0.021*"GOODREVIEW" + 0.010*"BADREVIEW" + 0.009*"get" + 0.008*"greenie" + 0.008*"leave" + 0.007*"shipping" + 0.006*"mail" + 0.006*"run" + 0.005*"remove" + 0.005*"offer"
+2018-10-11 21:28:32,415 : INFO - topic #0 (0.167): 0.077*"GOODREVIEW" + 0.046*"BADREVIEW" + 0.014*"chew" + 0.013*"breath" + 0.012*"treat" + 0.010*"like" + 0.010*"make" + 0.009*"regular" + 0.008*"buy" + 0.008*"well"
+2018-10-11 21:28:32,419 : INFO - topic diff=0.426094, rho=0.447214
+2018-10-11 21:28:32,429 : INFO - PROGRESS: pass 2, at document #210/630
+2018-10-11 21:28:32,621 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:32,628 : INFO - topic #4 (0.167): 0.072*"BADREVIEW" + 0.027*"GOODREVIEW" + 0.012*"would" + 0.011*"treat" + 0.011*"make" + 0.010*"eat" + 0.009*"get" + 0.009*"box" + 0.008*"sure" + 0.008*"bag"
+2018-10-11 21:28:32,630 : INFO - topic #1 (0.167): 0.125*"GOODREVIEW" + 0.048*"BADREVIEW" + 0.025*"teeth" + 0.021*"treat" + 0.016*"one" + 0.015*"get" + 0.013*"give" + 0.011*"great" + 0.010*"good" + 0.010*"breath"
+2018-10-11 21:28:32,635 : INFO - topic #5 (0.167): 0.017*"GOODREVIEW" + 0.008*"get" + 0.008*"BADREVIEW" + 0.007*"leave" + 0.007*"greenie" + 0.006*"shipping" + 0.006*"run" + 0.005*"like" + 0.005*"remove" + 0.005*"free"
+2018-10-11 21:28:32,639 : INFO - topic #3 (0.167): 0.043*"GOODREVIEW" + 0.015*"amazon" + 0.012*"pet" + 0.012*"price" + 0.010*"buy" + 0.009*"pack" + 0.008*"purchase" + 0.008*"vendor" + 0.008*"find" + 0.007*"sell"
+2018-10-11 21:28:32,642 : INFO - topic #0 (0.167): 0.079*"GOODREVIEW" + 0.043*"BADREVIEW" + 0.013*"breath" + 0.013*"chew" + 0.011*"make" + 0.011*"treat" + 0.010*"like" + 0.009*"well" + 0.008*"buy" + 0.007*"day"
+2018-10-11 21:28:32,647 : INFO - topic diff=0.350470, rho=0.408248
+2018-10-11 21:28:32,655 : INFO - PROGRESS: pass 2, at document #420/630
+2018-10-11 21:28:32,871 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:32,878 : INFO - topic #3 (0.167): 0.041*"GOODREVIEW" + 0.017*"amazon" + 0.014*"price" + 0.010*"purchase" + 0.009*"buy" + 0.009*"pet" + 0.008*"pack" + 0.008*"sell" + 0.007*"find" + 0.006*"continue"
+2018-10-11 21:28:32,880 : INFO - topic #4 (0.167): 0.067*"BADREVIEW" + 0.024*"GOODREVIEW" + 0.012*"make" + 0.011*"treat" + 0.011*"would" + 0.011*"eat" + 0.010*"get" + 0.010*"sure" + 0.008*"box" + 0.007*"try"
+2018-10-11 21:28:32,885 : INFO - topic #2 (0.167): 0.104*"GOODREVIEW" + 0.020*"price" + 0.018*"get" + 0.017*"amazon" + 0.014*"time" + 0.014*"greenie" + 0.013*"buy" + 0.013*"store" + 0.012*"one" + 0.012*"great"
+2018-10-11 21:28:32,889 : INFO - topic #1 (0.167): 0.128*"GOODREVIEW" + 0.047*"BADREVIEW" + 0.026*"teeth" + 0.023*"treat" + 0.017*"get" + 0.016*"one" + 0.013*"give" + 0.012*"breath" + 0.011*"good" + 0.011*"clean"
+2018-10-11 21:28:32,894 : INFO - topic #0 (0.167): 0.077*"GOODREVIEW" + 0.042*"BADREVIEW" + 0.015*"breath" + 0.013*"chew" + 0.011*"make" + 0.010*"treat" + 0.010*"well" + 0.010*"like" + 0.009*"regular" + 0.008*"buy"
+2018-10-11 21:28:32,899 : INFO - topic diff=0.322027, rho=0.408248
+2018-10-11 21:28:33,159 : INFO - -6.677 per-word bound, 102.3 perplexity estimate based on a held-out corpus of 210 documents with 6623 words
+2018-10-11 21:28:33,161 : INFO - PROGRESS: pass 2, at document #630/630
+2018-10-11 21:28:33,355 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:33,362 : INFO - topic #0 (0.167): 0.072*"GOODREVIEW" + 0.043*"BADREVIEW" + 0.014*"chew" + 0.012*"breath" + 0.011*"treat" + 0.010*"regular" + 0.010*"make" + 0.010*"like" + 0.009*"well" + 0.008*"buy"
+2018-10-11 21:28:33,365 : INFO - topic #5 (0.167): 0.012*"GOODREVIEW" + 0.008*"leave" + 0.008*"shipping" + 0.007*"mail" + 0.007*"greenie" + 0.006*"remove" + 0.006*"run" + 0.006*"el" + 0.005*"door" + 0.005*"get"
+2018-10-11 21:28:33,368 : INFO - topic #2 (0.167): 0.102*"GOODREVIEW" + 0.020*"price" + 0.017*"get" + 0.016*"time" + 0.016*"amazon" + 0.015*"order" + 0.014*"buy" + 0.014*"greenie" + 0.013*"store" + 0.013*"great"
+2018-10-11 21:28:33,373 : INFO - topic #4 (0.167): 0.083*"BADREVIEW" + 0.022*"GOODREVIEW" + 0.011*"eat" + 0.011*"make" + 0.010*"would" + 0.010*"treat" + 0.008*"box" + 0.008*"get" + 0.008*"cause" + 0.007*"food"
+2018-10-11 21:28:33,376 : INFO - topic #1 (0.167): 0.129*"GOODREVIEW" + 0.048*"BADREVIEW" + 0.026*"teeth" + 0.022*"treat" + 0.017*"get" + 0.017*"one" + 0.013*"give" + 0.011*"great" + 0.011*"clean" + 0.011*"good"
+2018-10-11 21:28:33,380 : INFO - topic diff=0.296374, rho=0.408248
+2018-10-11 21:28:33,393 : INFO - PROGRESS: pass 3, at document #210/630
+2018-10-11 21:28:33,589 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:33,596 : INFO - topic #4 (0.167): 0.076*"BADREVIEW" + 0.021*"GOODREVIEW" + 0.011*"would" + 0.011*"make" + 0.010*"treat" + 0.010*"eat" + 0.009*"box" + 0.008*"get" + 0.008*"sure" + 0.008*"try"
+2018-10-11 21:28:33,598 : INFO - topic #3 (0.167): 0.031*"GOODREVIEW" + 0.015*"amazon" + 0.011*"pet" + 0.010*"price" + 0.010*"pack" + 0.009*"purchase" + 0.009*"buy" + 0.009*"vendor" + 0.008*"sale" + 0.007*"find"
+2018-10-11 21:28:33,602 : INFO - topic #5 (0.167): 0.009*"GOODREVIEW" + 0.007*"leave" + 0.007*"shipping" + 0.006*"remove" + 0.006*"run" + 0.005*"greenie" + 0.005*"wake" + 0.005*"free" + 0.005*"mail" + 0.005*"cry"
+2018-10-11 21:28:33,605 : INFO - topic #0 (0.167): 0.073*"GOODREVIEW" + 0.041*"BADREVIEW" + 0.013*"chew" + 0.013*"breath" + 0.012*"make" + 0.010*"like" + 0.010*"treat" + 0.009*"well" + 0.008*"buy" + 0.007*"regular"
+2018-10-11 21:28:33,610 : INFO - topic #1 (0.167): 0.126*"GOODREVIEW" + 0.047*"BADREVIEW" + 0.025*"teeth" + 0.021*"treat" + 0.016*"one" + 0.016*"get" + 0.013*"give" + 0.011*"good" + 0.010*"breath" + 0.010*"like"
+2018-10-11 21:28:33,613 : INFO - topic diff=0.263194, rho=0.377964
+2018-10-11 21:28:33,718 : INFO - PROGRESS: pass 3, at document #420/630
+2018-10-11 21:28:33,901 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:33,909 : INFO - topic #3 (0.167): 0.029*"GOODREVIEW" + 0.017*"amazon" + 0.011*"price" + 0.010*"purchase" + 0.009*"pack" + 0.008*"pet" + 0.008*"buy" + 0.007*"sell" + 0.007*"continue" + 0.006*"low"
+2018-10-11 21:28:33,911 : INFO - topic #0 (0.167): 0.071*"GOODREVIEW" + 0.040*"BADREVIEW" + 0.014*"breath" + 0.013*"chew" + 0.011*"make" + 0.010*"well" + 0.010*"like" + 0.009*"treat" + 0.009*"regular" + 0.008*"buy"
+2018-10-11 21:28:33,915 : INFO - topic #4 (0.167): 0.070*"BADREVIEW" + 0.019*"GOODREVIEW" + 0.013*"make" + 0.011*"eat" + 0.011*"treat" + 0.010*"would" + 0.009*"sure" + 0.009*"get" + 0.008*"box" + 0.008*"try"
+2018-10-11 21:28:33,919 : INFO - topic #2 (0.167): 0.107*"GOODREVIEW" + 0.022*"price" + 0.018*"amazon" + 0.017*"get" + 0.015*"buy" + 0.014*"time" + 0.014*"store" + 0.014*"great" + 0.013*"greenie" + 0.012*"one"
+2018-10-11 21:28:33,923 : INFO - topic #1 (0.167): 0.129*"GOODREVIEW" + 0.047*"BADREVIEW" + 0.026*"teeth" + 0.023*"treat" + 0.018*"get" + 0.016*"one" + 0.013*"give" + 0.012*"breath" + 0.011*"good" + 0.011*"clean"
+2018-10-11 21:28:33,927 : INFO - topic diff=0.248546, rho=0.377964
+2018-10-11 21:28:34,206 : INFO - -6.624 per-word bound, 98.6 perplexity estimate based on a held-out corpus of 210 documents with 6623 words
+2018-10-11 21:28:34,208 : INFO - PROGRESS: pass 3, at document #630/630
+2018-10-11 21:28:34,382 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:34,390 : INFO - topic #5 (0.167): 0.008*"leave" + 0.008*"shipping" + 0.007*"mail" + 0.006*"remove" + 0.006*"GOODREVIEW" + 0.006*"door" + 0.006*"run" + 0.006*"el" + 0.006*"dinner" + 0.005*"free"
+2018-10-11 21:28:34,392 : INFO - topic #1 (0.167): 0.129*"GOODREVIEW" + 0.048*"BADREVIEW" + 0.026*"teeth" + 0.023*"treat" + 0.017*"get" + 0.017*"one" + 0.013*"give" + 0.011*"clean" + 0.011*"good" + 0.011*"breath"
+2018-10-11 21:28:34,396 : INFO - topic #2 (0.167): 0.105*"GOODREVIEW" + 0.022*"price" + 0.017*"amazon" + 0.016*"get" + 0.016*"time" + 0.016*"order" + 0.015*"buy" + 0.014*"store" + 0.014*"great" + 0.013*"greenie"
+2018-10-11 21:28:34,400 : INFO - topic #0 (0.167): 0.067*"GOODREVIEW" + 0.040*"BADREVIEW" + 0.014*"chew" + 0.012*"breath" + 0.011*"regular" + 0.010*"make" + 0.010*"treat" + 0.010*"well" + 0.010*"like" + 0.008*"senior"
+2018-10-11 21:28:34,405 : INFO - topic #4 (0.167): 0.085*"BADREVIEW" + 0.017*"GOODREVIEW" + 0.012*"make" + 0.011*"eat" + 0.010*"treat" + 0.009*"would" + 0.008*"box" + 0.008*"cause" + 0.007*"food" + 0.007*"get"
+2018-10-11 21:28:34,409 : INFO - topic diff=0.228508, rho=0.377964
+2018-10-11 21:28:34,420 : INFO - PROGRESS: pass 4, at document #210/630
+2018-10-11 21:28:34,642 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:34,650 : INFO - topic #3 (0.167): 0.023*"GOODREVIEW" + 0.014*"amazon" + 0.011*"pack" + 0.010*"purchase" + 0.010*"pet" + 0.009*"vendor" + 0.009*"price" + 0.009*"sale" + 0.007*"buy" + 0.007*"money"
+2018-10-11 21:28:34,652 : INFO - topic #5 (0.167): 0.007*"leave" + 0.007*"shipping" + 0.006*"remove" + 0.006*"run" + 0.005*"wake" + 0.005*"mail" + 0.005*"cry" + 0.005*"free" + 0.005*"edible" + 0.005*"GOODREVIEW"
+2018-10-11 21:28:34,656 : INFO - topic #0 (0.167): 0.067*"GOODREVIEW" + 0.039*"BADREVIEW" + 0.013*"chew" + 0.013*"breath" + 0.012*"make" + 0.010*"well" + 0.009*"like" + 0.009*"treat" + 0.008*"regular" + 0.007*"buy"
+2018-10-11 21:28:34,659 : INFO - topic #2 (0.167): 0.109*"GOODREVIEW" + 0.021*"price" + 0.018*"amazon" + 0.016*"time" + 0.015*"get" + 0.014*"great" + 0.014*"buy" + 0.014*"store" + 0.013*"order" + 0.013*"one"
+2018-10-11 21:28:34,662 : INFO - topic #4 (0.167): 0.078*"BADREVIEW" + 0.016*"GOODREVIEW" + 0.011*"make" + 0.011*"would" + 0.010*"eat" + 0.010*"treat" + 0.009*"box" + 0.008*"sure" + 0.008*"try" + 0.008*"get"
+2018-10-11 21:28:34,667 : INFO - topic diff=0.213832, rho=0.353553
+2018-10-11 21:28:34,679 : INFO - PROGRESS: pass 4, at document #420/630
+2018-10-11 21:28:34,862 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:34,869 : INFO - topic #2 (0.167): 0.109*"GOODREVIEW" + 0.023*"price" + 0.019*"amazon" + 0.016*"get" + 0.016*"buy" + 0.015*"store" + 0.015*"great" + 0.014*"time" + 0.013*"order" + 0.012*"one"
+2018-10-11 21:28:34,872 : INFO - topic #0 (0.167): 0.066*"GOODREVIEW" + 0.038*"BADREVIEW" + 0.014*"breath" + 0.012*"chew" + 0.011*"make" + 0.011*"well" + 0.010*"regular" + 0.009*"like" + 0.009*"treat" + 0.007*"buy"
+2018-10-11 21:28:34,876 : INFO - topic #1 (0.167): 0.129*"GOODREVIEW" + 0.047*"BADREVIEW" + 0.026*"teeth" + 0.024*"treat" + 0.018*"get" + 0.016*"one" + 0.013*"give" + 0.012*"breath" + 0.011*"good" + 0.011*"clean"
+2018-10-11 21:28:34,880 : INFO - topic #3 (0.167): 0.021*"GOODREVIEW" + 0.016*"amazon" + 0.011*"purchase" + 0.010*"pack" + 0.009*"price" + 0.007*"pet" + 0.007*"continue" + 0.007*"buy" + 0.007*"money" + 0.007*"low"
+2018-10-11 21:28:34,885 : INFO - topic #5 (0.167): 0.008*"leave" + 0.008*"shipping" + 0.008*"door" + 0.007*"run" + 0.007*"free" + 0.007*"mail" + 0.006*"dinner" + 0.006*"allow" + 0.006*"remove" + 0.006*"christmas"
+2018-10-11 21:28:34,889 : INFO - topic diff=0.209097, rho=0.353553
+2018-10-11 21:28:35,199 : INFO - -6.593 per-word bound, 96.5 perplexity estimate based on a held-out corpus of 210 documents with 6623 words
+2018-10-11 21:28:35,201 : INFO - PROGRESS: pass 4, at document #630/630
+2018-10-11 21:28:35,368 : INFO - merging changes from 210 documents into a model of 630 documents
+2018-10-11 21:28:35,376 : INFO - topic #5 (0.167): 0.008*"leave" + 0.008*"shipping" + 0.007*"mail" + 0.007*"remove" + 0.006*"door" + 0.006*"dinner" + 0.006*"run" + 0.006*"el" + 0.006*"allow" + 0.005*"free"
+2018-10-11 21:28:35,380 : INFO - topic #2 (0.167): 0.107*"GOODREVIEW" + 0.023*"price" + 0.018*"amazon" + 0.016*"order" + 0.016*"buy" + 0.016*"time" + 0.016*"get" + 0.016*"store" + 0.015*"great" + 0.013*"one"
+2018-10-11 21:28:35,384 : INFO - topic #4 (0.167): 0.086*"BADREVIEW" + 0.014*"GOODREVIEW" + 0.012*"make" + 0.011*"eat" + 0.009*"treat" + 0.009*"would" + 0.008*"box" + 0.008*"cause" + 0.008*"read" + 0.007*"food"
+2018-10-11 21:28:35,389 : INFO - topic #1 (0.167): 0.129*"GOODREVIEW" + 0.048*"BADREVIEW" + 0.026*"teeth" + 0.023*"treat" + 0.018*"get" + 0.017*"one" + 0.013*"give" + 0.011*"clean" + 0.011*"breath" + 0.011*"good"
+2018-10-11 21:28:35,393 : INFO - topic #0 (0.167): 0.063*"GOODREVIEW" + 0.038*"BADREVIEW" + 0.013*"chew" + 0.012*"breath" + 0.011*"regular" + 0.011*"make" + 0.010*"well" + 0.009*"like" + 0.009*"treat" + 0.008*"senior"
+2018-10-11 21:28:35,396 : INFO - topic diff=0.190935, rho=0.353553

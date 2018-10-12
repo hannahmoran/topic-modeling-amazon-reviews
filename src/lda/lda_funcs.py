@@ -117,7 +117,7 @@ def capture_logs():
     perplex = {}
     bounds = {}
     diff = {}
-    with open('.../models/training_output.log', 'r') as f:
+    with open('../models/training_output.log', 'r') as f:
         for line in f:
             if re.match("|".join([r'.*topic diff.*', r'.*per-word.*', r'.*PROGRESS.*']), line):
                 perplexity_log.append(line)
@@ -164,9 +164,9 @@ def run_lda(df, product, n_topics, n_passes, texts, save_path):
     :return: a dataframe with the results of the training
     :rtype: DataFrame 
     """
-    os.remove('.../models/training_output.log') # clear the log file
+    os.remove('../models/training_output.log') # clear the log file
     logger = logging.getLogger('gensim.models.ldamodel')
-    handler = logging.FileHandler('.../models/training_output.log')
+    handler = logging.FileHandler('../models/training_output.log')
     handler.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s : %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
@@ -176,8 +176,8 @@ def run_lda(df, product, n_topics, n_passes, texts, save_path):
     dictionary = corpora.Dictionary(texts)
     remove_freq(dictionary, 3) # remove the 3 most frequently appearing tokens
     corpus = [dictionary.doc2bow(text) for text in texts]
-    corpora.MmCorpus.serialize('.../models/tmp/corpus.mm', corpus)
-    mm = corpora.MmCorpus('.../models/tmp/corpus.mm')
+    corpora.MmCorpus.serialize('/tmp/corpus.mm', corpus)
+    mm = corpora.MmCorpus('/tmp/corpus.mm')
     review_counts = df['ProductId'].value_counts().sort_values()
     chunk_size = review_counts[product]/3
     lda = gensim.models.ldamodel.LdaModel(corpus=mm, id2word=dictionary, 
@@ -203,7 +203,7 @@ def run_lda(df, product, n_topics, n_passes, texts, save_path):
     for n in range(0,n_topics):
         topic = lda.show_topic(n, 20)
         results['topic {}'.format(n)] = [topic]
-    lda.save('.../models/{}/{}'.format(save_path, product))
+    lda.save('../models/{}/{}'.format(save_path, product))
     lda.clear()
     return results
 
@@ -229,9 +229,9 @@ def tune_lda(df, product, n_topics,
             each LDA model constructed by grid search
     :rtype: DataFrame
     """
-    os.remove('.../models/training_output.log')
+    os.remove('../models/training_output.log')
     logger = logging.getLogger('gensim.models.ldamodel')
-    handler = logging.FileHandler('.../models/training_output.log')
+    handler = logging.FileHandler('../models/training_output.log')
     handler.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s : %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
@@ -258,8 +258,8 @@ def tune_lda(df, product, n_topics,
                     #remove tokens that show up in n_below or fewer documents, 
                     # and in no_above or more (float %) of documents
                     corpus = [dictionary.doc2bow(text) for text in texts]
-                    corpora.MmCorpus.serialize('.../models/tmp/corpus.mm', corpus)
-                    mm = corpora.MmCorpus('.../models/tmp/corpus.mm')
+                    corpora.MmCorpus.serialize('/tmp/corpus.mm', corpus)
+                    mm = corpora.MmCorpus('/tmp/corpus.mm')
                     review_counts = df['ProductId'].value_counts().sort_values()
                     chunk_size = review_counts[product]/3
 
@@ -288,7 +288,7 @@ def tune_lda(df, product, n_topics,
                         topic = lda.show_topic(n, 20)
                         results['topic {}'.format(n)] = [topic]
 
-                    lda.save('.../models/{}/{}_{}_{}_{}_{}'.format(save_path, product, t, p, tn, na))
+                    lda.save('../models/{}/{}_{}_{}_{}_{}'.format(save_path, product, t, p, tn, na))
                     cm = CoherenceModel(model=lda, corpus=corpus, 
                                         texts = texts, coherence='c_v')
                     results['coherence'] = cm.get_coherence()
@@ -320,10 +320,10 @@ def save_best(output, final_results, save_path):
     final_results = final_results.append(output.loc[best_idx], ignore_index=True)
     t = output.loc[best_idx, 'num_topics']
     p = output.loc[best_idx, 'passes']
-    tn = output.loc[best_idx, 'top_n removed'].astype(int)
+    tn = output.loc[best_idx, 'top_n removed']
     na = output.loc[best_idx, 'n_above threshold']
-    lda = gensim.models.ldamodel.LdaModel.load(".../models/{}/{}_{}_{}_{}_{}".format(save_path, product, t, p, tn, na))
-    lda.save('.../models/{}/final_models/{}_{}_{}_{}_{}'.format(save_path, product, t, p, tn, na))
+    lda = gensim.models.ldamodel.LdaModel.load("../models/{}/{}_{}_{}_{}_{}".format(save_path, product, t, p, tn, na))
+    lda.save('../models/{}/final_models/{}_{}_{}_{}_{}'.format(save_path, product, t, p, tn, na))
     lda.clear()
     del output # don't need this interim df anymore
     print('Final model saved for product {} with {} topics over {} passes, removing top {} tokens and token review threshold {}.'.format(product, t, p, tn, na))
