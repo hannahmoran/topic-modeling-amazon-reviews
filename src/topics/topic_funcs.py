@@ -131,7 +131,7 @@ def get_topic_data(product, df, final_results, input_text, load_path, encoding_t
             
             # Build the bigram distribution over the set of words found in the reviews tagged to this topic
             #words = np.concatenate(np.array([word_tokenize(r) for r in sub_df['{}_x'.format(input_text)].values])) 
-            words = np.concatenate(np.array([word_tokenize(r) for r in sub_df['clean_review'].values])) 
+            words = np.concatenate(np.array([word_tokenize(r) for r in sub_df['clean_vanilla_x'].values])) 
 
             bigram_fd = FreqDist(bigrams(words))
             trigram_fd = FreqDist(trigrams(words))
