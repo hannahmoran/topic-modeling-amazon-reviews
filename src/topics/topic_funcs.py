@@ -109,29 +109,38 @@ def get_topic_data(product, df, final_results, input_text, load_path, encoding_t
     
     # iterate through the topics to get coherence, top review, key words, and bigrams
     for topic in range(0,t):
-        sub_df = data[data['{} Topic'.format(encoding_type)]==topic] # sub dataframe for just this topic
+        # sub dataframe where this is the main topic
+        main_topic_df = data[data['{} Topic'.format(encoding_type)]==topic] 
+        # sub dataframe where this is a subtopic
+        sub_topic_df = data[data['{} Subtopic'.format(encoding_type)]==topic]
         # grab the coherence measure
         coherence = (topics[topic][-1]) 
         # Make a list of the top words from the topic
         l = lda.show_topic(topic, topn=10) 
         # And then reformat this into a usable list 
         top_words = [x[0] for x in l]
-        # Get the number of reviews fitting into the topic 
-        count = len(data[data['{} Topic'.format(encoding_type)]==topic]) 
+        # Get the number of reviews fitting into the topic ...
+        # as the main topic, with a fit value above 0.7
+        as_main = len(main_topic_df.loc[main_topic_df['{} Fit'.format(encoding_type)]>=0.7])
+        # as the primary subtopic
+        as_primary_sub = len(main_topic_df.loc[(main_topic_df['{} Fit'.format(encoding_type)]<0.7)&
+                                               (main_topic_df['{} Fit'.format(encoding_type)]>=0.3)])
+        as_secondary_sub = len(sub_topic_df.loc[sub_topic_df['{} Subtopic Fit'.format(encoding_type)]>=0.3])
+        #count = len(data[data['{} Topic'.format(encoding_type)]==topic]) 
         try: 
             # Get an index locator for the best fitting review
-            ix = sub_df['{} Fit'.format(encoding_type)].idxmax(axis=0) 
+            ix = main_topic_df['{} Fit'.format(encoding_type)].idxmax(axis=0) 
             # Find the review that best matches the topic
-            top_review = sub_df.loc[ix, 'clean_review'] 
+            top_review = main_topic_df.loc[ix, 'clean_review'] 
             # Get that best review's fit value (probability review comes from topic)
-            fit = sub_df['{} Fit'.format(encoding_type)].max(axis=0) 
+            fit = main_topic_df['{} Fit'.format(encoding_type)].max(axis=0) 
             # Getting the bigrams
             bigram_measures = BigramAssocMeasures()
             trigram_measures = TrigramAssocMeasures()
             
             # Build the bigram distribution over the set of words found in the reviews tagged to this topic
             #words = np.concatenate(np.array([word_tokenize(r) for r in sub_df['{}_x'.format(input_text)].values])) 
-            words = np.concatenate(np.array([word_tokenize(r) for r in sub_df['clean_vanilla_x'].values])) 
+            words = np.concatenate(np.array([word_tokenize(r) for r in main_topic_df['clean_vanilla_x'].values])) 
 
             bigram_fd = FreqDist(bigrams(words))
             trigram_fd = FreqDist(trigrams(words))
@@ -172,7 +181,8 @@ def get_topic_data(product, df, final_results, input_text, load_path, encoding_t
             top_trigrams_freq = []
    
         
-        topic_data.append([product, topic, count, 
+        topic_data.append([product, topic, as_main,
+                           as_primary_sub, as_secondary_sub, 
                            coherence, top_words, 
                            top_review, fit, top_bigrams_pmi, 
                            top_bigrams_freq, top_trigrams_pmi, 
@@ -180,7 +190,8 @@ def get_topic_data(product, df, final_results, input_text, load_path, encoding_t
                 
         
     topic_data=pd.DataFrame(data=topic_data, 
-                            columns=['product', 'topic', 'review_count', 
+                            columns=['product', 'topic', 'as_main_topic',
+                                     'as_primary_subtopic', 'as_secondary_subtopic',
                                     'topic_coherence', 'top_words', 
                                     'best_review', 'best_review_fit', 
                                     'top_bigrams_pmi', 'top_bigrams_freq',
