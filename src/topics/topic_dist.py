@@ -176,7 +176,7 @@ def plot_topic_distribution(df, product):
     #r.title.text_font_size='9pt'
     r.xaxis.major_label_orientation = 0.75
 
-    # lay the three charts out in a grid
-    grid = gridplot([[l, c, r]])
+    # return the three charts for inclusion in a gridplot
+    grid = [l,c,r]
     return grid
     
